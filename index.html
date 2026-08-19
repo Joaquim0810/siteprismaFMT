@@ -12,6 +12,7 @@
     <header>
       <nav>
         <div class="logonome">Prisma EJ</div>
+        </div>
         <div class="botoes">
           <a href="#quemsomos">Sobre nós</a>
           <a href="#nossos-servicos">Serviços</a>
@@ -66,7 +67,7 @@
         <p>Planejamento para transformar comunicação em resultado</p>
       </div>
       <div class="servicos">
-        <h3>estratégias de marketing</h3>
+        <h3>Estratégias de Marketing</h3>
         <p>Planejamento para transformar comunicação em resultado.</p>
       </div>
     </section>
@@ -96,14 +97,40 @@
         <p>
           Você cuida do seu negócio. A Prisma cuida de como o mundo o enxerga.
         </p>
+        <button type="button" class="contato" onclick="abrirGmail()">
+          Entre em Contato
+        </button>
+
+        <!-- Código JavaScript -->
+        <script>
+          function abrirGmail() {
+            const email = "prismafmtcontato@gmail.com";
+            const assunto = encodeURIComponent("Contato via Site");
+            const mensagem = encodeURIComponent(
+              "Olá, gostaria de mais informações.",
+            );
+
+            // Detecta se o usuário está acessando por celular ou tablet
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(
+              navigator.userAgent,
+            );
+
+            if (isMobile) {
+              // No celular, abre o aplicativo de e-mail padrão do sistema
+              window.location.href = `mailto:${email}?subject=${assunto}&body=${mensagem}`;
+            } else {
+              // No PC, abre diretamente a tela de composição do Gmail em uma nova aba
+              const urlGmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${assunto}&body=${mensagem}`;
+              window.open(urlGmail, "_blank");
+            }
+          }
+        </script>
+
         <a
           class="contato"
-          href="https://mail.google.com/mail/u/0/#inbox?compose=fwmvGMDHbbhrhGmQzcmzNJcrQfwLvlGlZshzQFmgWwwvrGDmgmNPctfSZBDsgfVqvCxmmJPVsSBhDcCDSTrXGHlRzVdpMPnQPvFxPkXsBMdqKLWnSpZL" target="_top"
+          href="https://www.instagram.com/acsocial.jr/?utm_source=ig_web_button_share_sheet"
+          target="_blank"
         >
-          Entre em contato
-        </a>
-
-        <a class="contato" href="https://www.instagram.com/acsocial.jr/?utm_source=ig_web_button_share_sheet" target="_blank">
           Nosso Instagram
         </a>
       </div>
