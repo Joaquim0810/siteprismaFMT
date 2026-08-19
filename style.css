@@ -19,11 +19,16 @@ body {
 ========================= */
 
 header {
-  background-color: #ffffff;
-  color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 15px;
+  background-color: white;
   padding: 20px 40px;
-  position: relative;
+  color: black;
   z-index: 10;
+  box-sizing: border-box;
 }
 
 nav {
@@ -43,38 +48,28 @@ nav {
   align-items: center;
 }
 
-button {
-  width: 100px;
+.botoes a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 145px;
   padding: 10px;
-  border: none;
+  box-sizing: border-box;
   border-radius: 8px;
-
   background-color: #5b5fef;
-  color: #ffffff;
-
-  font-size: 14px;
-  cursor: pointer;
-
+  color: white;
+  text-decoration: none;
   transition: 0.3s;
 }
 
-button:hover {
+.botoes a:hover {
   background-color: #4548c7;
   transform: translateY(-2px);
 }
 
-button:active {
+.botoes a:active {
   transform: scale(0.9);
 }
-
-.contato:hover {
-  background-color: #7c3aed;
-}
-
-.contato:active {
-  background-color: #5b21b6;
-}
-
 
 /* =========================
    QUEM SOMOS
@@ -108,10 +103,7 @@ button:active {
   height: calc(100% + 20px);
 
   background-image:
-    linear-gradient(
-      rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.65)
-    ),
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url("turmafmt.jpeg");
 
   background-size: cover;
@@ -163,7 +155,6 @@ button:active {
 
   color: #222222;
 }
-
 
 /* =========================
    METAS
@@ -228,7 +219,6 @@ button:active {
   line-height: 1.5;
 }
 
-
 /* =========================
    SERVIÇOS
 ========================= */
@@ -286,7 +276,6 @@ button:active {
   line-height: 1.5;
 }
 
-
 /* =========================
    POR QUE A PRISMA
 ========================= */
@@ -334,7 +323,7 @@ button:active {
 .texpq li {
   padding: 20px;
 
-  background-color: #f1f1f1;
+  background-color: #cacaca;
 
   border-radius: 12px;
 
@@ -342,7 +331,6 @@ button:active {
 
   font-weight: bold;
 }
-
 
 /* =========================
    CTA FINAL
@@ -361,11 +349,7 @@ button:active {
 
   text-align: center;
 
-  background: linear-gradient(
-    135deg,
-    #111111,
-    #18184a
-  );
+  background: linear-gradient(135deg, #111111, #18184a);
 }
 
 #transfmarca h2 {
@@ -406,27 +390,71 @@ button:active {
   font-size: 16px;
 }
 
+/* =========================
+   BTT CONTATO
+========================= */
+.contato {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 180px;
+
+  padding: 15px;
+
+  margin: 5px;
+
+  box-sizing: border-box;
+
+  border-radius: 8px;
+
+  background-color: #5b5fef;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.contato:hover {
+  background-color: #4548c7;
+
+  transform: translateY(-2px);
+}
+
+.contato:active {
+  transform: scale(0.9);
+}
 
 /* =========================
    RESPONSIVIDADE
 ========================= */
 
 @media (max-width: 768px) {
-
   header {
-    padding: 20px;
+    padding: 15px 10px;
   }
 
   nav {
-    flex-direction: column;
-
-    gap: 20px;
+    flex-direction: row;
+    gap: 10px;
   }
 
   .botoes {
-    flex-wrap: wrap;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
 
-    justify-content: center;
+  .botoes a {
+    width: auto;
+    padding: 8px 10px;
+    font-size: 12px;
   }
 
   #quemsomos {
