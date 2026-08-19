@@ -29,6 +29,7 @@ header {
   color: black;
   z-index: 10;
   box-sizing: border-box;
+  border-bottom: 1px solid #cccccc;
 }
 
 nav {
@@ -420,6 +421,11 @@ nav {
   cursor: pointer;
 
   transition: 0.3s;
+}
+
+button{
+  border: none;
+  outline: none;
 }
 
 .contato:hover {
